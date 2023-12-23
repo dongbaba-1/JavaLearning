@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavabeanDemo/JavabeanDemo.iml" filepath="$PROJECT_DIR$/JavabeanDemo/JavabeanDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bankSystem/bankSystem.iml" filepath="$PROJECT_DIR$/bankSystem/bankSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basicLearning.iml" filepath="$PROJECT_DIR$/basicLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter1_CaseExercise/chapter1_CaseExercise.iml" filepath="$PROJECT_DIR$/chapter1_CaseExercise/chapter1_CaseExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonAPI/commonAPI.iml" filepath="$PROJECT_DIR$/commonAPI/commonAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/helloworld_app/helloworld_app.iml" filepath="$PROJECT_DIR$/helloworld_app/helloworld_app.iml" />
+    </modules>
+  </component>
+</project>
