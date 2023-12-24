@@ -3,19 +3,18 @@ public class Account {
     private String name;
     private String gender;
     private String password;
-    private double amount;
+    private double balance;
     private double quota;
 
     public Account(){
 
     }
 
-    public Account(int id, String name, String gender, String password, double amount, double quota) {
+    public Account(int id, String name, String gender, String password, double quota) {
         this.id = id;
         this.name = name;
         this.gender = gender;
         this.password = password;
-        this.amount = amount;
         this.quota = quota;
     }
 
@@ -51,12 +50,12 @@ public class Account {
         this.password = password;
     }
 
-    public double getAmount() {
-        return amount;
+    public double getBalance() {
+        return balance;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public double getQuota() {
@@ -66,4 +65,6 @@ public class Account {
     public void setQuota(double quota) {
         this.quota = quota;
     }
+
+
 }
