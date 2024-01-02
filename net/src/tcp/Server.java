@@ -19,8 +19,10 @@ public class Server {
 //                serverSocket.close();
 //                break;
 //            }
+
             //阻塞在这里，等待客户端的连接请求
             Socket socket = serverSocket.accept();
+
             sockets.add(socket);
             //主线程收到连接请求，生成一个socket并交给一个子线程处理
             new ServerReaderThread(socket).start();

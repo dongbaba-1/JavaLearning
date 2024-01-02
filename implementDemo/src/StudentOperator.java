@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public interface StudentOperator {
+public interface StudentOperator {
+    void printInfo();
+    void printAverage();
+
 }

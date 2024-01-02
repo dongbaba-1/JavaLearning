@@ -22,9 +22,12 @@ public class ServerReaderThread extends Thread{
                     //卡在这里，等待消息传过来
                     String msg = dis.readUTF();
                     System.out.println(msg);
-                    //向socket列表里的所有socket写这条消息
+                    //收到消息后，向socket列表里的所有socket写这条消息
+                    System.out.println("分发该条消息");
                     for (Socket socket1 : sockets) {
                         //System.out.println("十大");
+                        if(socket1.equals(socket))
+                            continue;
                         OutputStream outputStream = socket1.getOutputStream();
                         DataOutputStream dos = new DataOutputStream(outputStream);
                         dos.writeUTF("来自客户端" + socket1.getLocalSocketAddress() +msg);
@@ -32,6 +35,7 @@ public class ServerReaderThread extends Thread{
                     }
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
+                    sockets.remove(socket);
                     socket.close();
                     dis.close();
                     break;
