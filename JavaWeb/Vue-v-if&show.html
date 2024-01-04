@@ -15,11 +15,11 @@
     <input type="text" v-model="age">
     <br>
     你是<span v-if="age <= 35">年轻人</span>
-    <span v-else-if="age > 35 && age <60">中年人</span>
+    <span v-else-if="age > 35 && age < 60">中年人</span>
     <span v-else>老年人</span>
 
     你是<span v-show="age <= 35">年轻人</span>
-    <span v-show="age > 35 && age <60">中年人</span>
+    <span v-show="age > 35 && age < 60">中年人</span>
     <span v-show="age>=60">老年人</span>
     </div>
 </body>

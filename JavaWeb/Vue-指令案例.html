@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue指令案例</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <table border="1" width="450px">
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>成绩</th>
+                <th>等级</th>
+            </tr>
+            <tr v-for="user in users" align="center">
+                <td>{{user.name}}</td>
+                <td>
+                    <span v-if="user.gender == 1">男</span>
+                    <span v-else>女</span>
+                </td>
+                <td>{{user.age}}</td>
+                <td>{{user.score}}</td>
+                <td>
+                    <span v-if="user.score >= 85">优秀</span>
+                    <span v-else-if="user.score >=60 && user.score < 85">及格</span>
+                    <span v-else style="color: red;">不及格</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            users:[
+            {name:"Tom",age:20,gender:1,score:86},
+            {name:"Rose",age:18,gender:2,score:56},
+            {name:"Tony",age:20,gender:1,score:78},
+            {name:"Jerry",age:19,gender:2,score:45}]
+            
+        },
+        methods: {
+            
+        },
+    })
+</script>
+
+</html>
