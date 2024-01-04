@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+    <h4>你的年龄是？</h4>
+    <!-- <input type="button" value="35以下" id="-35" v-on:click="handle()">
+    <input type="button" value="35-60" id="35-60" v-on:click="handle()">
+    <input type="button" value="60以上" id="+60" v-on:click="handle()"> -->
+    <input type="text" v-model="age">
+    <br>
+    你是<span v-if="age <= 35">年轻人</span>
+    <span v-else-if="age > 35 && age <60">中年人</span>
+    <span v-else>老年人</span>
+
+    你是<span v-show="age <= 35">年轻人</span>
+    <span v-show="age > 35 && age <60">中年人</span>
+    <span v-show="age>=60">老年人</span>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            age:15
+        },
+        methods: {
+            
+        }
+    })
+</script>
+</html>

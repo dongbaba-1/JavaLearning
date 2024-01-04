@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue快速入门</title>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <!-- 视图层 -->
+    <div id="app">
+        <input type="text" v-model="message">
+        <!-- v-model绑定数据模型 -->
+        {{message}}
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el:"#app",//Vue接管区域
+        data:{ //定义数据模型
+            message:"你好"
+        }
+    })
+</script>
+</html>

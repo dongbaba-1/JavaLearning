@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定demo</title>
+</head>
+<body>
+    <img id = "light" src="img/on.png">
+    <h3>请把鼠标放上来试试</h3>
+    <h3 id = "changedText"></h3>
+    <input id="button1" type="button" value="点击我">
+    <!-- 第一种方式 testKeyboard必须加()-->
+    <input type="text" onkeydown="testKeyboard()"> 
+    <h3 id = "testH"></h3>
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+    <br>
+    <input id="chooseAll" type="button" value="全选" onclick="buttonChooseAll()">
+    <input id="chooseAnt" type="button" value="反选" onclick="buttonChooseAnt()">
+</body>
+<script>
+    var hobbys = document.getElementsByName('hobby');
+    // 第二种方式
+    document.getElementById("button1").onclick = function(){
+        alert("你点击了按钮");
+    }
+    document.getElementById('light').onmouseover = function(){
+        document.getElementById('changedText').innerText = "鼠标移到了图片上";
+    }
+    document.getElementById('light').onmouseout = function(){
+        document.getElementById('changedText').innerText = "鼠标移开了图片";
+    }
+    function testKeyboard(){
+        document.getElementById('testH').innerHTML = "按下了键盘" 
+    }
+    function buttonChooseAll(){
+        
+        for (let index = 0; index < hobbys.length; index++) {
+            hobbys[index].checked = true;
+        }
+    }
+    function buttonChooseAnt(){
+        for (let index = 0; index < hobbys.length; index++) {
+            if(hobbys[index].checked){
+                hobbys[index].checked = false;
+            }
+            else{
+                hobbys[index].checked = true;
+            }
+        }
+    }
+</script>
+</html>
