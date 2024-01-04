@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-获取元素</title>
+</head>
+<body>
+    <h1 id="h1">Hello</h1>
+    <div class="cls">电子科技大学</div> <br>
+    <div class="cls">沙河校区</div> <br>
+
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+</body>
+
+<script>
+    //1、根据id属性值Element对象
+    // var h1 = document.getElementById('h1');
+    // alert(h1);
+
+    //2’根据标签名返回Element对象数组
+    // var divs = document.getElementsByTagName("div");
+    // for (let index = 0; index < divs.length; index++) {
+    //     var attribute = divs[index].getAttribute;
+    //     alert(attribute);
+    
+    // }
+
+    //3、根据name属性获取
+    // var ins = document.getElementsByName('hobby');
+    // for (let index = 0; index < ins.length; index++) {
+    //     alert(ins[index]);
+        
+    // }
+
+    //4、根据class属性获取
+    var ins = document.getElementsByClassName('cls');
+    for (let index = 0; index < ins.length; index++) {
+        alert(ins[index])
+    }
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-案例</title>
+    
+</head>
+<body>
+    <img id="h1" src="img/屏幕截图 2024-01-04 124439.png"> <br><br>
+    <div class="cls">电子科技大学</div> <br>
+    <div class="cls">沙河校区</div> <br>
+    
+    
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+    <br>
+    <input type="button" onclick="myFunction()" value="Click it!">
+</body>
+<script>
+    function myFunction(){
+        var h1 = document.getElementById('h1');
+        h1.src = "img/on.png";
+        
+        var clss = document.getElementsByClassName('cls');
+
+        for (let index = 0; index < clss.length; index++) {
+            clss[index].innerHTML += "<span style='color: red;'>very good</span>";
+        }
+
+        var hobbys = document.getElementsByName('hobby');
+        for (let index = 0; index < hobbys.length; index++) {
+            hobbys[index].checked = true;
+            
+        }
+    }
+    
+</script>
+</html>
